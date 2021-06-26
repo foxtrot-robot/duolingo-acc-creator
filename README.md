@@ -7,7 +7,7 @@ pip3 install -r requirements.txt
 python3 main.py
 ```
 # Notes
-**Make sure to edit config.json.example**
+**Make sure to edit config.json.example and then rename it to config.json**
 **Make sure to focus on the windows, while generating account otherwise it will throw exception**
 
 # Videos
