@@ -14,3 +14,4 @@ python3 main.py
 ![GIF](gif.gif)
 # Photos
 ![Photo](Screenshot.jpg)
+![Photo2](Screenshot2.jpg)
