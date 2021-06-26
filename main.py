@@ -7,11 +7,13 @@ try:
     import sys
     import json
 
-    with open("settings.json", "r") as f:
+    with open("config.json", "r") as f:
         config = json.load(f)
         # Config values
         global download_wordlists
         download_wordlists = config.get('download-wordlists')
+        global invite_url
+        invite_url = config.get('invite-url')
 except:
     command = "pip3 install -r requirements.txt"
     print(f"Please execute this command in your shell: {command}")
@@ -46,8 +48,7 @@ def selenium_work():
         global driver
         driver = webdriver.Firefox(executable_path=PATH)
 
-        invite_link = "https://invite.duolingo.com/BDHTZTB5CWWKSZUG23MNUSBS3E"
-        driver.get(invite_link)
+        driver.get(invite_url)
 
         language = driver.find_element_by_css_selector("a.uS_Xr:nth-child(1) > div:nth-child(1)").click()
         time.sleep(5)
@@ -90,6 +91,18 @@ def selenium_work():
         selenium_work()
 
 if __name__ == "__main__":
-    print("Loading into the main function")
+    if download_wordlists == "true":
+        print("Downloading email wordlist...")
+        download_usernames()
+        print("Downloaded email wordlist succesfully!")
+        time.sleep(10)
+        print("Downloading password wordlist...")
+        download_passwords()
+        print("Downloaded password wordlist succesfully!")
+        time.sleep(10)
 
-    selenium_work()
+        print("Loading main function!")
+        selenium_work()
+    else:
+        print("Loading main function...")
+        selenium_work()
