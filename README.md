@@ -9,4 +9,4 @@ python3 main.py
 **Make sure to edit config.json.example**
 
 # Videos
-![GIF](Videos/gif.gif)
+![GIF](gif.gif)
