@@ -12,3 +12,5 @@ python3 main.py
 
 # Videos
 ![GIF](gif.gif)
+# Photos
+![Photo](Screenshot.jpg)
