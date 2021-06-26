@@ -35,11 +35,12 @@ def gen_password():
         words = list(map(str, text.split()))
         generated_password = random.choice(words)
         return generated_password
-def fake_email():
+def fake_email(): # for generating fake emails
     with open("usernames.txt", "r") as file:
         text = file.read()
         words = list(map(str, text.split()))
-        generated_email = random.choice(words) + "@gmail.com"
+        emaildomains = ['gmail.com', 'tutanota.com', 'protonmail.com', 'yahoo.com', 'hotmail.com', 'mail.ru']
+        generated_email = random.choice(words) + random.choice(emaildomains)
 
         return generated_email
 def selenium_work():
