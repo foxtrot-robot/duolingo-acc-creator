@@ -10,12 +10,10 @@ try:
     with open("config.json", "r") as f:
         config = json.load(f)
         # Config values
-        global download_wordlists
         download_wordlists = config.get('download-wordlists')
-        global invite_url
         invite_url = config.get('invite-url')
-        global seleniumdriverpath
-        seleniumdriverpath = config.get('selenium-driver-path')
+        selenium_driver_path = config.get('selenium-driver-path')
+
 except:
     command = "pip3 install -r requirements.txt"
     print(f"Please execute this command in your shell: {command}")
@@ -46,9 +44,8 @@ def fake_email():
         return generated_email
 def selenium_work():
     try:
-        PATH = fr"{seleniumdriverpath}"
         global driver
-        driver = webdriver.Firefox(executable_path=PATH)
+        driver = webdriver.Firefox(executable_path=selenium_driver_path)
 
         driver.get(invite_url)
 
