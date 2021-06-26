@@ -14,6 +14,8 @@ try:
         download_wordlists = config.get('download-wordlists')
         global invite_url
         invite_url = config.get('invite-url')
+        global seleniumdriverpath
+        seleniumdriverpath = config.get('selenium-driver-path')
 except:
     command = "pip3 install -r requirements.txt"
     print(f"Please execute this command in your shell: {command}")
@@ -44,7 +46,7 @@ def fake_email():
         return generated_email
 def selenium_work():
     try:
-        PATH = r"C:\Users\lenovo\Desktop\geckodriver.exe"
+        PATH = fr"{seleniumdriverpath}"
         global driver
         driver = webdriver.Firefox(executable_path=PATH)
 

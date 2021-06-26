@@ -1,4 +1,5 @@
 {
   "download-wordlists": false,
-  "invite-url": "https://invite.duolingo.com/BDHTZTB5CWWKSZUG23MNUSBS3E"
+  "invite-url": "https://invite.duolingo.com/BDHTZTB5CWWKSZUG23MNUSBS3E",
+  "selenium-driver-path": ""
 }
