@@ -1,0 +1,13 @@
+CHANGES.txt
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+tox.ini
+src/random2.py
+src/tests.py
+src/random2.egg-info/PKG-INFO
+src/random2.egg-info/SOURCES.txt
+src/random2.egg-info/dependency_links.txt
+src/random2.egg-info/top_level.txt
+src/random2.egg-info/zip-safe
